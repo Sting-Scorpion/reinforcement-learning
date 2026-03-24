@@ -106,7 +106,7 @@ class ModifiedMcAgent:
             self.pi[state] = epsilon_greedy_probs(self.Q, state, epsilon=self.epsilon)
 
 if __name__ == "__main__":
-    # np.random.seed(42) # 使结果可复现
+    np.random.seed(42) # 使结果可复现
     env = GridWorld()
     # agent = McAgent(0.9, 4)
     agent = ModifiedMcAgent(0.9, 4, 0.1, 0.1)
