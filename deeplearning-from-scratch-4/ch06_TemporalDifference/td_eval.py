@@ -35,6 +35,7 @@ class TdAgent:
         self.V[state] += td_error * self.alpha
 
 if __name__ == "__main__":
+    np.random.seed(42) # 使结果可复现
     env = GridWorld()
     agent = TdAgent()
 
