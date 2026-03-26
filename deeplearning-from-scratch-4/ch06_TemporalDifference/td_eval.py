@@ -27,6 +27,7 @@ class TdAgent:
         return np.random.choice(actions, p=probs)
     
     def eval(self, state, reward, next_state, done):
+        """执行时序差分方法进行策略评估"""
         next_V = 0 if done else self.V[next_state]
         td_target = reward + self.gamma * next_V
 
